@@ -8,8 +8,8 @@ from telegram.ext import (
 from collections import defaultdict
 from datetime import time
 
-# 🔐 Replace with your bot token
-BOT_TOKEN = '8319413626:AAGVZNEziOiQoREQEOSO20jDv3t-jtJKMMU'
+import os
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 
 # Stores: group_id -> user_id -> count
 group_user_photo_counts = defaultdict(lambda: defaultdict(int))
